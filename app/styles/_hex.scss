@@ -1,0 +1,95 @@
+.hex {
+  &__img {
+    width: 22rem;
+    margin: auto;
+    margin-top: 16rem;
+    position: relative;
+
+    @include breakpoint-up($defaultScreenBreak) {
+      width: 32rem;
+      margin-top: 13rem;
+    }
+
+    .bgHex {
+      width: 100%;
+    }
+  }
+
+  #scissors {
+    background-image: linear-gradient($scissorsFrom, $scissorsTo);
+    box-shadow: 0 3px 0px rgb(141, 101, 19);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    z-index: 100;
+
+    @include breakpoint-up($defaultScreenBreak) {
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  #paper {
+    background-image: linear-gradient($paperFrom, $paperTo);
+    box-shadow: 0 3px 0px rgb(53, 83, 235);
+    position: absolute;
+    top: 20%;
+    right: -18%;
+    z-index: 100;
+
+    @include breakpoint-up($defaultScreenBreak) {
+      right: -28%;
+      top: 15%;
+    }
+  }
+
+  #spock {
+    background-image: linear-gradient($cyanFrom, $cyanTo);
+    box-shadow: 0 3px 0px rgb(83, 149, 160);
+    position: absolute;
+    top: 20%;
+    left: -18%;
+    z-index: 100;
+
+    @include breakpoint-up($defaultScreenBreak) {
+      left: -28%;
+      top: 15%;
+    }
+  }
+
+  #lizard {
+    background-image: linear-gradient($lizardFrom, $lizardTo);
+    box-shadow: 0 3px 0px rgb(98, 54, 170);
+    position: absolute;
+    bottom: -18%;
+    left: 0%;
+    z-index: 100;
+
+    @include breakpoint-up($defaultScreenBreak) {
+      bottom: -25%;
+      left: -4%;
+    }
+  }
+
+  #rock {
+    background-image: linear-gradient($rockFrom, $rockTo);
+    box-shadow: 0 3px 0px rgb(160, 21, 50);
+    position: absolute;
+    bottom: -18%;
+    right: 0%;
+    z-index: 100;
+
+    @include breakpoint-up($defaultScreenBreak) {
+      bottom: -25%;
+      right: -4%;
+    }
+  }
+
+  &__button {
+    @include button(9.4rem, 7rem, 1.2rem);
+
+    @include breakpoint-up($defaultScreenBreak) {
+      @include button(14.9rem, 11.3rem, 1.8rem);
+    }
+  }
+}

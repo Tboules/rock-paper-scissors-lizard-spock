@@ -1,0 +1,55 @@
+.rules {
+  &__butt {
+    position: absolute;
+    top: 70rem;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: transparent;
+    border: 2px solid $headerOutline;
+    color: $bgGeneral;
+    width: 13rem;
+    height: 4.1rem;
+    border-radius: 8px;
+    letter-spacing: 0.2rem;
+    font-size: 1.4rem;
+
+    @include breakpoint-up($defaultScreenBreak) {
+      left: 92%;
+    }
+  }
+
+  &__rule-cont {
+    background-color: $bgGeneral;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    padding: 10rem 0rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .rule-title {
+      font-size: 3rem;
+      color: $darkText;
+      margin-bottom: 10rem;
+      margin-top: 0;
+    }
+
+    .rule-close {
+      margin-top: 13rem;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      outline: none;
+      transition: transform 0.3s;
+
+      &:hover {
+        transform: rotate(90deg);
+      }
+    }
+  }
+}

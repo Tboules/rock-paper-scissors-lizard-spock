@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Rock, Paper, Scissors</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./app/styles/style.css" />
+  </head>
+  <body>
+    <div class="cont">
+      <header class="header">
+        <img src="./images/logo-bonus.svg" alt="logo" class="logo" />
+        <div class="header__score">
+          <p>SCORE</p>
+          <h2>0</h2>
+        </div>
+      </header>
+
+      <section class="hex">
+        <div class="hex__img">
+          <img class="bgHex" src="./images/bg-pentagon.svg" alt="hexagon" />
+
+          <!-- buttons -->
+          <div class="hex__button" id="scissors">
+            <div class="innerButt">
+              <img
+                class="button-icon"
+                src="./images/icon-scissors.svg"
+                alt="scissors hand"
+              />
+            </div>
+          </div>
+          <div class="hex__button" id="paper">
+            <div class="innerButt">
+              <img
+                class="button-icon"
+                src="./images/icon-paper.svg"
+                alt="scissors hand"
+              />
+            </div>
+          </div>
+          <div class="hex__button" id="spock">
+            <div class="innerButt">
+              <img
+                class="button-icon"
+                src="./images/icon-paper.svg"
+                alt="scissors hand"
+              />
+            </div>
+          </div>
+          <div class="hex__button" id="lizard">
+            <div class="innerButt">
+              <img
+                class="button-icon"
+                src="./images/icon-lizard.svg"
+                alt="scissors hand"
+              />
+            </div>
+          </div>
+          <div class="hex__button" id="rock">
+            <div class="innerButt">
+              <img
+                class="button-icon"
+                src="./images/icon-rock.svg"
+                alt="scissors hand"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="results hide">
+        <div class="results__picked">
+          <div class="results__picked__card">
+            <div class="circle">
+              <!-- copied Button -->
+              <div class="hex__button hide" id="scissors">
+                <div class="innerButt">
+                  <img
+                    class="button-icon"
+                    src="./images/icon-scissors.svg"
+                    alt="scissors hand"
+                  />
+                </div>
+              </div>
+              <div class="hex__button" id="paper">
+                <div class="innerButt">
+                  <img
+                    class="button-icon"
+                    src="./images/icon-paper.svg"
+                    alt="scissors hand"
+                  />
+                </div>
+              </div>
+              <div class="hex__button hide" id="spock">
+                <div class="innerButt">
+                  <img
+                    class="button-icon"
+                    src="./images/icon-spock.svg"
+                    alt="scissors hand"
+                  />
+                </div>
+              </div>
+              <div class="hex__button hide" id="lizard">
+                <div class="innerButt">
+                  <img
+                    class="button-icon"
+                    src="./images/icon-lizard.svg"
+                    alt="scissors hand"
+                  />
+                </div>
+              </div>
+              <div class="hex__button hide" id="rock">
+                <div class="innerButt">
+                  <img
+                    class="button-icon"
+                    src="./images/icon-rock.svg"
+                    alt="scissors hand"
+                  />
+                </div>
+              </div>
+              <div class="winning-circles"></div>
+            </div>
+            <h1>YOU PICKED</h1>
+          </div>
+          <div class="results__picked__final-reset">
+            <h1>YOU WIN</h1>
+            <button class="play-again">PLAY AGAIN</button>
+          </div>
+          <div class="results__picked__card">
+            <div class="circle">
+              <div class="hex__button" id="scissors">
+                <div class="innerButt">
+                  <img
+                    class="button-icon"
+                    src="./images/icon-scissors.svg"
+                    alt="scissors hand"
+                  />
+                </div>
+              </div>
+              <div class="hex__button hide" id="paper">
+                <div class="innerButt">
+                  <img
+                    class="button-icon"
+                    src="./images/icon-paper.svg"
+                    alt="scissors hand"
+                  />
+                </div>
+              </div>
+              <div class="hex__button hide" id="spock">
+                <div class="innerButt">
+                  <img
+                    class="button-icon"
+                    src="./images/icon-spock.svg"
+                    alt="scissors hand"
+                  />
+                </div>
+              </div>
+              <div class="hex__button hide" id="lizard">
+                <div class="innerButt">
+                  <img
+                    class="button-icon"
+                    src="./images/icon-lizard.svg"
+                    alt="scissors hand"
+                  />
+                </div>
+              </div>
+              <div class="hex__button hide" id="rock">
+                <div class="innerButt">
+                  <img
+                    class="button-icon"
+                    src="./images/icon-rock.svg"
+                    alt="scissors hand"
+                  />
+                </div>
+              </div>
+              <div class="winning-circles hide"></div>
+            </div>
+            <h1>THE HOUSE PICKED</h1>
+          </div>
+        </div>
+      </section>
+
+      <section class="rules">
+        <button class="rules__butt">RULES</button>
+        <div class="rules__rule-cont hide">
+          <h1 class="rule-title">RULES</h1>
+          <img
+            src="./images/image-rules-bonus.svg"
+            alt="rule card"
+            class="rules__rules-image"
+          />
+          <button class="rule-close">
+            <img src="./images/icon-close.svg" alt="close button" />
+          </button>
+        </div>
+      </section>
+    </div>
+
+    <!---->
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Anthony Boules</a>.
+    </div>
+    <script src="./app/js/script.js"></script>
+  </body>
+</html>
+<!-- Score
+Rules
+
+You Picked
+The House Picked
+
+You Win
+You Lose
+
+Play Again -->

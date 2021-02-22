@@ -1,0 +1,31 @@
+@mixin button($buttonSize, $innerSize, $borderSize) {
+  width: $buttonSize;
+  height: $buttonSize;
+  border-radius: 50%;
+  cursor: pointer;
+
+  .innerButt {
+    position: absolute;
+    top: $borderSize;
+    left: $borderSize;
+    width: $innerSize;
+    height: $innerSize;
+    background-color: $bgGeneral;
+    box-shadow: inset 0 3px 0px rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .button-icon {
+      height: 50%;
+    }
+  }
+}
+
+@mixin breakpoint-up($size) {
+  @media (min-width: $size) {
+    @content;
+  }
+}
