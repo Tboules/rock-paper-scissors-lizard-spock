@@ -1,6 +1,6 @@
 const closeRules = document.querySelector(".rule-close");
 const openRules = document.querySelector(".rules__butt");
-const ruleModal = document.querySelector(".rules__rule-cont");
+const ruleModal = document.querySelector(".rules__overlay");
 
 closeRules.addEventListener("click", () => {
   ruleModal.classList.add("hide");

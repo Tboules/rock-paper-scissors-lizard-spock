@@ -3,17 +3,34 @@
   margin: auto;
   margin-top: 12rem;
 
+  @include breakpoint-up($defaultScreenBreak) {
+    max-width: 70%;
+  }
+
   &__picked {
     display: flex;
     justify-content: space-between;
     padding: 0rem 0.5rem;
     flex-wrap: wrap;
 
+    @include breakpoint-up($defaultScreenBreak) {
+      flex-wrap: nowrap;
+      justify-content: space-around;
+      align-items: center;
+    }
+
     &__final-reset {
       order: 3;
       text-align: center;
       flex-basis: 100%;
       margin-top: 7.2rem;
+
+      @include breakpoint-up($defaultScreenBreak) {
+        order: 0;
+        flex-basis: 0;
+        margin-top: 0;
+        margin: 0 7rem;
+      }
 
       h1 {
         margin: 0;
@@ -39,6 +56,16 @@
       height: 17.5rem;
       position: relative;
 
+      @include breakpoint-up($defaultScreenBreak) {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        align-items: center;
+        margin-right: 3rem;
+        margin-left: 3rem;
+        height: 40rem;
+      }
+
       .circle {
         width: 11rem;
         height: 11rem;
@@ -46,53 +73,52 @@
         border-radius: 50%;
         position: relative;
 
-        #scissors {
-          background-image: linear-gradient($scissorsFrom, $scissorsTo);
-          box-shadow: 0 3px 0px rgb(141, 101, 19);
+        @include breakpoint-up($defaultScreenBreak) {
+          width: 28rem;
+          height: 28rem;
+        }
+
+        #scissors,
+        #paper,
+        #spock,
+        #lizard,
+        #rock {
           position: absolute;
           top: -1rem;
           left: -0.5rem;
           z-index: 100;
+        }
+
+        #scissors {
+          background-image: linear-gradient($scissorsFrom, $scissorsTo);
+          box-shadow: 0 3px 0px rgb(141, 101, 19);
         }
 
         #paper {
           background-image: linear-gradient($paperFrom, $paperTo);
           box-shadow: 0 3px 0px rgb(53, 83, 235);
-          position: absolute;
-          top: -1rem;
-          left: -0.5rem;
-          z-index: 100;
         }
 
         #spock {
           background-image: linear-gradient($cyanFrom, $cyanTo);
           box-shadow: 0 3px 0px rgb(83, 149, 160);
-          position: absolute;
-          top: -1rem;
-          left: -0.5rem;
-          z-index: 100;
         }
 
         #lizard {
           background-image: linear-gradient($lizardFrom, $lizardTo);
           box-shadow: 0 3px 0px rgb(98, 54, 170);
-          position: absolute;
-          top: -1rem;
-          left: -0.5rem;
-          z-index: 100;
         }
 
         #rock {
           background-image: linear-gradient($rockFrom, $rockTo);
           box-shadow: 0 3px 0px rgb(160, 21, 50);
-          position: absolute;
-          top: -1rem;
-          left: -0.5rem;
-          z-index: 100;
         }
 
         .hex__button {
           @include button(13rem, 10rem, 1.5rem);
+          @include breakpoint-up($defaultScreenBreak) {
+            @include button(30rem, 24rem, 3rem);
+          }
         }
       }
 
@@ -100,6 +126,13 @@
         text-align: center;
         color: $bgGeneral;
         margin-top: 3.5rem;
+
+        @include breakpoint-up($defaultScreenBreak) {
+          margin-top: 0;
+          margin-bottom: 7rem;
+          font-size: 2rem;
+          letter-spacing: 0.5rem;
+        }
       }
 
       .winning-circles {
@@ -113,6 +146,11 @@
           height: 28.5rem;
           background-color: rgba(252, 252, 252, 0.02);
           border-radius: 50%;
+
+          @include breakpoint-up($defaultScreenBreak) {
+            width: 74rem;
+            height: 74rem;
+          }
         }
 
         position: absolute;
@@ -123,6 +161,11 @@
         height: 22rem;
         background-color: rgba(252, 252, 252, 0.05);
         border-radius: 50%;
+        @include breakpoint-up($defaultScreenBreak) {
+          width: 57rem;
+          height: 57rem;
+          transform: translate(-51%, -51%);
+        }
 
         &::after {
           content: "";
@@ -134,6 +177,10 @@
           height: 16.5rem;
           background-color: rgba(252, 252, 252, 0.08);
           border-radius: 50%;
+          @include breakpoint-up($defaultScreenBreak) {
+            width: 43rem;
+            height: 43rem;
+          }
         }
       }
     }
