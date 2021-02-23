@@ -24,12 +24,12 @@ button {
 }
 
 .cont {
+  height: 100vh;
   min-height: 81.2rem;
   width: 100%;
   margin: auto;
   padding: 3rem 3rem;
   overflow: hidden;
-  max-width: 136.6rem;
 }
 
 .hide {
@@ -322,6 +322,8 @@ button {
 @media (min-width: 840px) {
   .rules__butt {
     left: 92%;
+    top: initial;
+    bottom: 4rem;
   }
 }
 

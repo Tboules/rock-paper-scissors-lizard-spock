@@ -54,9 +54,9 @@ function playerChooses(button) {
   resultsSection.classList.remove("hide");
   showPlayerChip(true);
 
-  setTimeout(() => showComputerChip(true), 1500);
+  setTimeout(() => showComputerChip(true), 2000);
 
-  setTimeout(showResults, 3000);
+  setTimeout(showResults, 2000);
 
   console.log(doesPlayerWin());
 }

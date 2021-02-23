@@ -15,6 +15,8 @@
 
     @include breakpoint-up($defaultScreenBreak) {
       left: 92%;
+      top: initial;
+      bottom: 4rem;
     }
   }
 

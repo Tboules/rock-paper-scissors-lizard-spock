@@ -22,12 +22,14 @@ button {
 }
 
 .cont {
+  height: 100vh;
   min-height: 81.2rem;
+
   width: 100%;
   margin: auto;
   padding: 3rem 3rem;
   overflow: hidden;
-  max-width: 136.6rem;
+  // max-width: 136.6rem;
 }
 
 .hide {
