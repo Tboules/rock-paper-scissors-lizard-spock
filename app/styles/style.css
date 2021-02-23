@@ -688,6 +688,7 @@ button {
   height: 22rem;
   background-color: rgba(252, 252, 252, 0.05);
   border-radius: 50%;
+  z-index: -10;
 }
 
 .results__picked__card .winning-circles::before {
@@ -701,6 +702,7 @@ button {
   height: 28.5rem;
   background-color: rgba(252, 252, 252, 0.02);
   border-radius: 50%;
+  z-index: -10;
 }
 
 @media (min-width: 840px) {
@@ -730,6 +732,7 @@ button {
   height: 16.5rem;
   background-color: rgba(252, 252, 252, 0.08);
   border-radius: 50%;
+  z-index: -10;
 }
 
 @media (min-width: 840px) {
